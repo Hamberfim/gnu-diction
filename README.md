@@ -1,1 +1,2 @@
-# gnu-diction
+### gnu diction
+checks writing quality and style
