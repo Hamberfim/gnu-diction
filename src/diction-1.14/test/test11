@@ -1,0 +1,28 @@
+#!/bin/sh
+
+echo -n $0: 'Fill words... '
+
+cat >test.in <<eof
+Checking for fill words.
+eof
+
+cat >test.db <<eof
+ fill
+eof
+
+cat >test.ref <<eof
+test.in:1.1-1.24: Checking for [fill] words.
+
+1 phrase in 1 sentence found.
+eof
+
+sh ./test/rundiction -f test.db test.in >test.data
+
+if cmp test.ref test.data
+then
+  rm -f test.*
+  echo passed
+else
+  echo failed
+  exit 1
+fi

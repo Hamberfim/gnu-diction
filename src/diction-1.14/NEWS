@@ -1,0 +1,6 @@
+The following things have been changed compared to version 1.13:
+
+o  Described diction file format
+o  Allowed diction databases to contain comments
+o  Diction runs faster
+o  Bug that prevented to mark fill words fixed
